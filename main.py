@@ -22,7 +22,7 @@ async def extract_text_endpoint(file: UploadFile = File(...)):
             f.write(await file.read())
 
         # Извлекаем текст
-        extracted_text = await extract_text(file_path)
+        extracted_text = extract_text(file_path)
 
         # Удаляем временный файл
         os.remove(file_path)

@@ -14,8 +14,6 @@ import pytesseract
 import os
 import sys
 
-import asyncio
-
 # Создание функции для извлечения текста
 
 def text_extraction(element):
@@ -138,14 +136,13 @@ def image_to_text(image_path):
     except Exception as e:
         print(f"Ошибка обработки изображения: {str(e)}")
         return ""
-    
-async def extract_text(pdf_path):
+
+def extract_text(pdf_path: str):
     """
     Функция для извлечения текста из PDF-файла или изображения (JPG/PNG).
     Возвращает распознанный текст в виде строки.
     """
-    await asyncio.sleep(1)
-    
+
     # Проверяем расширение файла
     extension = get_file_extension(pdf_path)
 
@@ -274,6 +271,8 @@ async def extract_text(pdf_path):
 #    f.write(extracted_text)
 
 #print("Текст успешно извлечен и сохранен в output.txt")
+
+"""next  is used debug-only"""
 
 def extract_main():
     # Проверяем, что передан хотя бы один аргумент (путь к файлу)

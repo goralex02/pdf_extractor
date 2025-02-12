@@ -1,3 +1,4 @@
+# has not been tested yet
 FROM python:3.12-slim
 
 # Установка системных зависимостей

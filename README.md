@@ -26,16 +26,16 @@ test.py - тестовый скрипт, можно удалить
 
 1. Клонируйте репозиторий
 
-git clone https://github.com/goralex02/pdf_extractor.git
+  git clone https://github.com/goralex02/pdf_extractor.git
 
-cd text-extractor
+  cd text-extractor
 
 2. Соберите Docker-образ
 
-docker build -t text-extractor .
+  docker build -t text-extractor .
 
 3. Запустите контейнер
 
-docker run -d -p 8000:8000 text-extractor
+  docker run -d -p 8000:8000 text-extractor
 
-Приложение будет доступно по адресу: http://localhost:8000
+  Приложение будет доступно по адресу: http://localhost:8000

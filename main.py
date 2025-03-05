@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 import os
-from extractor import extract_text  # Импортируйте вашу функцию
+from extractor import extract_text  # Фнкция распознавания
 import logging
 
 app = FastAPI()
@@ -12,7 +12,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 logging.basicConfig(level=logging.INFO)
 
-@app.post("/extract-text/")
+@app.post("/ai-tools/extract-text/")
 async def extract_text_endpoint(file: UploadFile = File(...)):
     logging.info(f"Received file: {file.filename}")
     try:
